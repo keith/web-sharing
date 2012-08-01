@@ -13,6 +13,11 @@
 		C21CFC1215C8CF520080E1BC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C21CFC1015C8CF520080E1BC /* Credits.rtf */; };
 		C21CFC1515C8CF520080E1BC /* KSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C21CFC1415C8CF520080E1BC /* KSAppDelegate.m */; };
 		C21CFC1815C8CF520080E1BC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21CFC1615C8CF520080E1BC /* MainMenu.xib */; };
+		C21CFC2E15C8D4A20080E1BC /* menuItem.png in Resources */ = {isa = PBXBuildFile; fileRef = C21CFC2A15C8D4A20080E1BC /* menuItem.png */; };
+		C21CFC2F15C8D4A20080E1BC /* menuItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C21CFC2B15C8D4A20080E1BC /* menuItem@2x.png */; };
+		C21CFC3015C8D4A20080E1BC /* menuItemHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = C21CFC2C15C8D4A20080E1BC /* menuItemHighlight.png */; };
+		C21CFC3115C8D4A20080E1BC /* menuItemHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C21CFC2D15C8D4A20080E1BC /* menuItemHighlight@2x.png */; };
+		C2EF538D15C8D6F900A03230 /* MPLoginItems.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EF538C15C8D6F800A03230 /* MPLoginItems.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,12 @@
 		C21CFC1315C8CF520080E1BC /* KSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSAppDelegate.h; sourceTree = "<group>"; };
 		C21CFC1415C8CF520080E1BC /* KSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSAppDelegate.m; sourceTree = "<group>"; };
 		C21CFC1715C8CF520080E1BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C21CFC2A15C8D4A20080E1BC /* menuItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuItem.png; sourceTree = "<group>"; };
+		C21CFC2B15C8D4A20080E1BC /* menuItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuItem@2x.png"; sourceTree = "<group>"; };
+		C21CFC2C15C8D4A20080E1BC /* menuItemHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuItemHighlight.png; sourceTree = "<group>"; };
+		C21CFC2D15C8D4A20080E1BC /* menuItemHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuItemHighlight@2x.png"; sourceTree = "<group>"; };
+		C2EF538B15C8D6F800A03230 /* MPLoginItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPLoginItems.h; sourceTree = "<group>"; };
+		C2EF538C15C8D6F800A03230 /* MPLoginItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPLoginItems.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +96,7 @@
 				C21CFC1315C8CF520080E1BC /* KSAppDelegate.h */,
 				C21CFC1415C8CF520080E1BC /* KSAppDelegate.m */,
 				C21CFC1615C8CF520080E1BC /* MainMenu.xib */,
+				C2EF538F15C8D72800A03230 /* MPLogin */,
 				C21CFC0815C8CF520080E1BC /* Supporting Files */,
 			);
 			path = "Web Sharing";
@@ -98,8 +110,21 @@
 				C21CFC0D15C8CF520080E1BC /* main.m */,
 				C21CFC0F15C8CF520080E1BC /* Web Sharing-Prefix.pch */,
 				C21CFC1015C8CF520080E1BC /* Credits.rtf */,
+				C21CFC2A15C8D4A20080E1BC /* menuItem.png */,
+				C21CFC2B15C8D4A20080E1BC /* menuItem@2x.png */,
+				C21CFC2C15C8D4A20080E1BC /* menuItemHighlight.png */,
+				C21CFC2D15C8D4A20080E1BC /* menuItemHighlight@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2EF538F15C8D72800A03230 /* MPLogin */ = {
+			isa = PBXGroup;
+			children = (
+				C2EF538B15C8D6F800A03230 /* MPLoginItems.h */,
+				C2EF538C15C8D6F800A03230 /* MPLoginItems.m */,
+			);
+			name = MPLogin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +182,10 @@
 				C21CFC0C15C8CF520080E1BC /* InfoPlist.strings in Resources */,
 				C21CFC1215C8CF520080E1BC /* Credits.rtf in Resources */,
 				C21CFC1815C8CF520080E1BC /* MainMenu.xib in Resources */,
+				C21CFC2E15C8D4A20080E1BC /* menuItem.png in Resources */,
+				C21CFC2F15C8D4A20080E1BC /* menuItem@2x.png in Resources */,
+				C21CFC3015C8D4A20080E1BC /* menuItemHighlight.png in Resources */,
+				C21CFC3115C8D4A20080E1BC /* menuItemHighlight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +198,7 @@
 			files = (
 				C21CFC0E15C8CF520080E1BC /* main.m in Sources */,
 				C21CFC1515C8CF520080E1BC /* KSAppDelegate.m in Sources */,
+				C2EF538D15C8D6F900A03230 /* MPLoginItems.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +324,7 @@
 				C21CFC1D15C8CF520080E1BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

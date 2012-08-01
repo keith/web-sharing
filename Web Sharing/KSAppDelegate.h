@@ -7,9 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MPLoginItems.h"
 
-@interface KSAppDelegate : NSObject <NSApplicationDelegate>
+@interface KSAppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate> {
+    NSStatusItem *statusItem;
+    NSUserDefaults *prefs;
+    IBOutlet NSMenu *webSharingMenu;
+}
+@property (weak) IBOutlet NSMenuItem *launchAtLoginItem;
 
-@property (assign) IBOutlet NSWindow *window;
+- (IBAction)startApache:(id)sender;
+- (IBAction)stopApache:(id)sender;
+- (IBAction)restartApache:(id)sender;
+
+- (IBAction)launchAtLoginCheckChanged:(id)sender;
 
 @end
