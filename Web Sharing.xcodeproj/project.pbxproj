@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C21CFC0215C8CF520080E1BC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C21CFC0115C8CF520080E1BC /* Cocoa.framework */; };
+		C21CFC0C15C8CF520080E1BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C21CFC0A15C8CF520080E1BC /* InfoPlist.strings */; };
+		C21CFC0E15C8CF520080E1BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C21CFC0D15C8CF520080E1BC /* main.m */; };
+		C21CFC1215C8CF520080E1BC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C21CFC1015C8CF520080E1BC /* Credits.rtf */; };
+		C21CFC1515C8CF520080E1BC /* KSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C21CFC1415C8CF520080E1BC /* KSAppDelegate.m */; };
+		C21CFC1815C8CF520080E1BC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21CFC1615C8CF520080E1BC /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C21CFBFD15C8CF520080E1BC /* Web Sharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Web Sharing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C21CFC0115C8CF520080E1BC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C21CFC0415C8CF520080E1BC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C21CFC0515C8CF520080E1BC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C21CFC0615C8CF520080E1BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C21CFC0915C8CF520080E1BC /* Web Sharing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Web Sharing-Info.plist"; sourceTree = "<group>"; };
+		C21CFC0B15C8CF520080E1BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C21CFC0D15C8CF520080E1BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C21CFC0F15C8CF520080E1BC /* Web Sharing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Web Sharing-Prefix.pch"; sourceTree = "<group>"; };
+		C21CFC1115C8CF520080E1BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C21CFC1315C8CF520080E1BC /* KSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSAppDelegate.h; sourceTree = "<group>"; };
+		C21CFC1415C8CF520080E1BC /* KSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSAppDelegate.m; sourceTree = "<group>"; };
+		C21CFC1715C8CF520080E1BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C21CFBFA15C8CF520080E1BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C21CFC0215C8CF520080E1BC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C21CFBF215C8CF520080E1BC = {
+			isa = PBXGroup;
+			children = (
+				C21CFC0715C8CF520080E1BC /* Web Sharing */,
+				C21CFC0015C8CF520080E1BC /* Frameworks */,
+				C21CFBFE15C8CF520080E1BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C21CFBFE15C8CF520080E1BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C21CFBFD15C8CF520080E1BC /* Web Sharing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C21CFC0015C8CF520080E1BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C21CFC0115C8CF520080E1BC /* Cocoa.framework */,
+				C21CFC0315C8CF520080E1BC /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C21CFC0315C8CF520080E1BC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C21CFC0415C8CF520080E1BC /* AppKit.framework */,
+				C21CFC0515C8CF520080E1BC /* CoreData.framework */,
+				C21CFC0615C8CF520080E1BC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C21CFC0715C8CF520080E1BC /* Web Sharing */ = {
+			isa = PBXGroup;
+			children = (
+				C21CFC1315C8CF520080E1BC /* KSAppDelegate.h */,
+				C21CFC1415C8CF520080E1BC /* KSAppDelegate.m */,
+				C21CFC1615C8CF520080E1BC /* MainMenu.xib */,
+				C21CFC0815C8CF520080E1BC /* Supporting Files */,
+			);
+			path = "Web Sharing";
+			sourceTree = "<group>";
+		};
+		C21CFC0815C8CF520080E1BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C21CFC0915C8CF520080E1BC /* Web Sharing-Info.plist */,
+				C21CFC0A15C8CF520080E1BC /* InfoPlist.strings */,
+				C21CFC0D15C8CF520080E1BC /* main.m */,
+				C21CFC0F15C8CF520080E1BC /* Web Sharing-Prefix.pch */,
+				C21CFC1015C8CF520080E1BC /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C21CFBFC15C8CF520080E1BC /* Web Sharing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C21CFC1B15C8CF520080E1BC /* Build configuration list for PBXNativeTarget "Web Sharing" */;
+			buildPhases = (
+				C21CFBF915C8CF520080E1BC /* Sources */,
+				C21CFBFA15C8CF520080E1BC /* Frameworks */,
+				C21CFBFB15C8CF520080E1BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Web Sharing";
+			productName = "Web Sharing";
+			productReference = C21CFBFD15C8CF520080E1BC /* Web Sharing.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C21CFBF415C8CF520080E1BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KS;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Keith Smiley";
+			};
+			buildConfigurationList = C21CFBF715C8CF520080E1BC /* Build configuration list for PBXProject "Web Sharing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C21CFBF215C8CF520080E1BC;
+			productRefGroup = C21CFBFE15C8CF520080E1BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C21CFBFC15C8CF520080E1BC /* Web Sharing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C21CFBFB15C8CF520080E1BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C21CFC0C15C8CF520080E1BC /* InfoPlist.strings in Resources */,
+				C21CFC1215C8CF520080E1BC /* Credits.rtf in Resources */,
+				C21CFC1815C8CF520080E1BC /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C21CFBF915C8CF520080E1BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C21CFC0E15C8CF520080E1BC /* main.m in Sources */,
+				C21CFC1515C8CF520080E1BC /* KSAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C21CFC0A15C8CF520080E1BC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C21CFC0B15C8CF520080E1BC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C21CFC1015C8CF520080E1BC /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C21CFC1115C8CF520080E1BC /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		C21CFC1615C8CF520080E1BC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C21CFC1715C8CF520080E1BC /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C21CFC1915C8CF520080E1BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C21CFC1A15C8CF520080E1BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C21CFC1C15C8CF520080E1BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Web Sharing/Web Sharing-Prefix.pch";
+				INFOPLIST_FILE = "Web Sharing/Web Sharing-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C21CFC1D15C8CF520080E1BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Web Sharing/Web Sharing-Prefix.pch";
+				INFOPLIST_FILE = "Web Sharing/Web Sharing-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C21CFBF715C8CF520080E1BC /* Build configuration list for PBXProject "Web Sharing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C21CFC1915C8CF520080E1BC /* Debug */,
+				C21CFC1A15C8CF520080E1BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C21CFC1B15C8CF520080E1BC /* Build configuration list for PBXNativeTarget "Web Sharing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C21CFC1C15C8CF520080E1BC /* Debug */,
+				C21CFC1D15C8CF520080E1BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C21CFBF415C8CF520080E1BC /* Project object */;
+}
