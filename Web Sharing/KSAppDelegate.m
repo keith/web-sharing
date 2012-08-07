@@ -10,7 +10,7 @@
 #import "KSConstants.h"
 
 @implementation KSAppDelegate
-@synthesize launchAtLoginItem;
+
 @synthesize startItem;
 @synthesize stopItem;
 @synthesize restartItem;
@@ -109,5 +109,9 @@
     }
 }
 
+- (IBAction)showAbout:(id)sender {
+    [NSApp orderFrontStandardAboutPanel:sender];
+    [NSApp activateIgnoringOtherApps:YES];
+}
 
 @end

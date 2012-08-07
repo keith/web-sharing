@@ -14,7 +14,7 @@
     NSUserDefaults *prefs;
     IBOutlet NSMenu *webSharingMenu;
 }
-@property (weak) IBOutlet NSMenuItem *launchAtLoginItem;
+
 @property (weak) IBOutlet NSMenuItem *startItem;
 @property (weak) IBOutlet NSMenuItem *stopItem;
 @property (weak) IBOutlet NSMenuItem *restartItem;
@@ -23,6 +23,7 @@
 - (IBAction)stopApache:(id)sender;
 - (IBAction)restartApache:(id)sender;
 
+- (IBAction)showAbout:(id)sender;
 - (IBAction)launchAtLoginCheckChanged:(id)sender;
 
 @end
