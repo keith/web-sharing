@@ -7,13 +7,19 @@
 //
 
 #import "KSAppDelegate.h"
+#import "KSConstants.h"
 
 @implementation KSAppDelegate
 @synthesize launchAtLoginItem;
+@synthesize startItem;
+@synthesize stopItem;
+@synthesize restartItem;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [self setLastRan:nil];
     prefs = [NSUserDefaults standardUserDefaults];
-    [prefs registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:NO, @"launchAtLogin", NO, @"stopWhenQuit", nil]];
+    NSDictionary *prefsPlist = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Prefs" ofType:@"plist"]];
+    [prefs registerDefaults:prefsPlist];
     
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [statusItem setImage:[NSImage imageNamed:@"menuItem"]];
@@ -21,6 +27,10 @@
     [statusItem setAlternateImage:[NSImage imageNamed:@"menuItemHighlight"]];
     [statusItem setTarget:self];
     [statusItem setMenu:webSharingMenu];
+    
+    if ([prefs boolForKey:START_SERVER_ON_LAUNCH]) {
+        [self startApache:nil];
+    }
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification {
@@ -28,7 +38,7 @@
     if (!prefs) {
         prefs = [NSUserDefaults standardUserDefaults];
     }
-    if ([prefs boolForKey:@"stopWhenQuit"]) {
+    if ([prefs boolForKey:STOP_SERVER_ON_QUIT]) {
         [self stopApache:nil];
     }
     [prefs synchronize];
@@ -39,7 +49,10 @@
     NSString *script =  @"do shell script \"apachectl start\" with administrator privileges";
     NSAppleScript *appleScript = [[NSAppleScript new] initWithSource:script];
     if (![appleScript executeAndReturnError:&error]) {
-        [[NSAlert alertWithMessageText:@"Apache Error" defaultButton:NSLocalizedString(@"OK", @"Ok button") alternateButton:nil otherButton:nil informativeTextWithFormat:@"Apache failed to start"] runModal];
+        [[NSAlert alertWithMessageText:@"Apache Error" defaultButton:NSLocalizedString(@"OK", @"Ok button") alternateButton:nil otherButton:nil informativeTextWithFormat:@"Apache failed to start or you did not enter your administrator password"] runModal];
+        [NSApp activateIgnoringOtherApps:YES];
+    } else {
+        [self setLastRan:@"Start"];
     }
 }
 - (IBAction)stopApache:(id)sender {
@@ -47,7 +60,10 @@
     NSString *script =  @"do shell script \"apachectl stop\" with administrator privileges";
     NSAppleScript *appleScript = [[NSAppleScript new] initWithSource:script];
     if (![appleScript executeAndReturnError:&error]) {
-        [[NSAlert alertWithMessageText:@"Apache Error" defaultButton:NSLocalizedString(@"OK", @"Ok button") alternateButton:nil otherButton:nil informativeTextWithFormat:@"Apache failed to stop"] runModal];
+        [[NSAlert alertWithMessageText:@"Apache Error" defaultButton:NSLocalizedString(@"OK", @"Ok button") alternateButton:nil otherButton:nil informativeTextWithFormat:@"Apache failed to stop or you did not enter your administrator password"] runModal];
+        [NSApp activateIgnoringOtherApps:YES];
+    } else {
+        [self setLastRan:@"Stop"];
     }
 }
 - (IBAction)restartApache:(id)sender {
@@ -55,7 +71,23 @@
     NSString *script =  @"do shell script \"apachectl restart\" with administrator privileges";
     NSAppleScript *appleScript = [[NSAppleScript new] initWithSource:script];
     if (![appleScript executeAndReturnError:&error]) {
-        [[NSAlert alertWithMessageText:@"Apache Error" defaultButton:NSLocalizedString(@"OK", @"Ok button") alternateButton:nil otherButton:nil informativeTextWithFormat:@"Apache failed to restart"] runModal];
+        [[NSAlert alertWithMessageText:@"Apache Error" defaultButton:NSLocalizedString(@"OK", @"Ok button") alternateButton:nil otherButton:nil informativeTextWithFormat:@"Apache failed to restart or you did not enter your administrator password"] runModal];
+        [NSApp activateIgnoringOtherApps:YES];
+    } else {
+        [self setLastRan:@"Restart"];
+    }
+}
+
+- (void)setLastRan:(NSString *)caller {
+    [startItem setState:NSOffState];
+    [stopItem setState:NSOffState];
+    [restartItem setState:NSOffState];
+    if ([caller isEqualToString:@"Start"]) {
+        [startItem setState:NSOnState];
+    } else if ([caller isEqualToString:@"Stop"]) {
+        [stopItem setState:NSOnState];
+    } else if ([caller isEqualToString:@"Restart"]) {
+        [restartItem setState:NSOnState];
     }
 }
 
@@ -66,10 +98,14 @@
 - (void)loginCheck {
     prefs = [NSUserDefaults standardUserDefaults];
     NSURL *pathURL = [[NSBundle mainBundle] bundleURL];
-    if ([prefs boolForKey:@"launchAtLogin"]) {
-        [MPLoginItems addLoginItemWithURL:pathURL];
+    if ([prefs boolForKey:LAUNCH_AT_LOGIN]) {
+        if (![MPLoginItems loginItemExists:pathURL]) {
+            [MPLoginItems addLoginItemWithURL:pathURL];
+        }
     } else {
-        [MPLoginItems removeLoginItemWithURL:pathURL];
+        if ([MPLoginItems loginItemExists:pathURL]) {
+            [MPLoginItems removeLoginItemWithURL:pathURL];
+        }
     }
 }
 

@@ -15,6 +15,9 @@
     IBOutlet NSMenu *webSharingMenu;
 }
 @property (weak) IBOutlet NSMenuItem *launchAtLoginItem;
+@property (weak) IBOutlet NSMenuItem *startItem;
+@property (weak) IBOutlet NSMenuItem *stopItem;
+@property (weak) IBOutlet NSMenuItem *restartItem;
 
 - (IBAction)startApache:(id)sender;
 - (IBAction)stopApache:(id)sender;

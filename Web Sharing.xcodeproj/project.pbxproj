@@ -17,8 +17,27 @@
 		C21CFC2F15C8D4A20080E1BC /* menuItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C21CFC2B15C8D4A20080E1BC /* menuItem@2x.png */; };
 		C21CFC3015C8D4A20080E1BC /* menuItemHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = C21CFC2C15C8D4A20080E1BC /* menuItemHighlight.png */; };
 		C21CFC3115C8D4A20080E1BC /* menuItemHighlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C21CFC2D15C8D4A20080E1BC /* menuItemHighlight@2x.png */; };
+		C288319715D18F9A0072B594 /* KSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C288319615D18F9A0072B594 /* KSConstants.m */; };
+		C288319A15D18FD00072B594 /* Prefs.plist in Resources */ = {isa = PBXBuildFile; fileRef = C288319915D18FD00072B594 /* Prefs.plist */; };
+		C28831A015D1916A0072B594 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C288319F15D1916A0072B594 /* Sparkle.framework */; };
+		C28831A215D191840072B594 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28831A115D191840072B594 /* Carbon.framework */; };
+		C28831A415D191A00072B594 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C288319F15D1916A0072B594 /* Sparkle.framework */; };
+		C28831A615D192B00072B594 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = C28831A515D192B00072B594 /* dsa_pub.pem */; };
 		C2EF538D15C8D6F900A03230 /* MPLoginItems.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EF538C15C8D6F800A03230 /* MPLoginItems.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C28831A315D191960072B594 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C28831A415D191A00072B594 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C21CFBFD15C8CF520080E1BC /* Web Sharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Web Sharing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +57,12 @@
 		C21CFC2B15C8D4A20080E1BC /* menuItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuItem@2x.png"; sourceTree = "<group>"; };
 		C21CFC2C15C8D4A20080E1BC /* menuItemHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuItemHighlight.png; sourceTree = "<group>"; };
 		C21CFC2D15C8D4A20080E1BC /* menuItemHighlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuItemHighlight@2x.png"; sourceTree = "<group>"; };
+		C288319515D18F9A0072B594 /* KSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSConstants.h; sourceTree = "<group>"; };
+		C288319615D18F9A0072B594 /* KSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSConstants.m; sourceTree = "<group>"; };
+		C288319915D18FD00072B594 /* Prefs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Prefs.plist; sourceTree = "<group>"; };
+		C288319F15D1916A0072B594 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "Web Sharing/Sparkle.framework"; sourceTree = "<group>"; };
+		C28831A115D191840072B594 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		C28831A515D192B00072B594 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		C2EF538B15C8D6F800A03230 /* MPLoginItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPLoginItems.h; sourceTree = "<group>"; };
 		C2EF538C15C8D6F800A03230 /* MPLoginItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPLoginItems.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28831A215D191840072B594 /* Carbon.framework in Frameworks */,
+				C28831A015D1916A0072B594 /* Sparkle.framework in Frameworks */,
 				C21CFC0215C8CF520080E1BC /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +101,8 @@
 		C21CFC0015C8CF520080E1BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C28831A115D191840072B594 /* Carbon.framework */,
+				C288319F15D1916A0072B594 /* Sparkle.framework */,
 				C21CFC0115C8CF520080E1BC /* Cocoa.framework */,
 				C21CFC0315C8CF520080E1BC /* Other Frameworks */,
 			);
@@ -95,7 +124,10 @@
 			children = (
 				C21CFC1315C8CF520080E1BC /* KSAppDelegate.h */,
 				C21CFC1415C8CF520080E1BC /* KSAppDelegate.m */,
+				C288319515D18F9A0072B594 /* KSConstants.h */,
+				C288319615D18F9A0072B594 /* KSConstants.m */,
 				C21CFC1615C8CF520080E1BC /* MainMenu.xib */,
+				C288319915D18FD00072B594 /* Prefs.plist */,
 				C2EF538F15C8D72800A03230 /* MPLogin */,
 				C21CFC0815C8CF520080E1BC /* Supporting Files */,
 			);
@@ -106,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				C21CFC0915C8CF520080E1BC /* Web Sharing-Info.plist */,
+				C28831A515D192B00072B594 /* dsa_pub.pem */,
 				C21CFC0A15C8CF520080E1BC /* InfoPlist.strings */,
 				C21CFC0D15C8CF520080E1BC /* main.m */,
 				C21CFC0F15C8CF520080E1BC /* Web Sharing-Prefix.pch */,
@@ -137,6 +170,7 @@
 				C21CFBF915C8CF520080E1BC /* Sources */,
 				C21CFBFA15C8CF520080E1BC /* Frameworks */,
 				C21CFBFB15C8CF520080E1BC /* Resources */,
+				C28831A315D191960072B594 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -186,6 +220,8 @@
 				C21CFC2F15C8D4A20080E1BC /* menuItem@2x.png in Resources */,
 				C21CFC3015C8D4A20080E1BC /* menuItemHighlight.png in Resources */,
 				C21CFC3115C8D4A20080E1BC /* menuItemHighlight@2x.png in Resources */,
+				C288319A15D18FD00072B594 /* Prefs.plist in Resources */,
+				C28831A615D192B00072B594 /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +235,7 @@
 				C21CFC0E15C8CF520080E1BC /* main.m in Sources */,
 				C21CFC1515C8CF520080E1BC /* KSAppDelegate.m in Sources */,
 				C2EF538D15C8D6F900A03230 /* MPLoginItems.m in Sources */,
+				C288319715D18F9A0072B594 /* KSConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +323,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Web Sharing\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Web Sharing/Web Sharing-Prefix.pch";
 				INFOPLIST_FILE = "Web Sharing/Web Sharing-Info.plist";
@@ -299,6 +340,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Web Sharing\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Web Sharing/Web Sharing-Prefix.pch";
 				INFOPLIST_FILE = "Web Sharing/Web Sharing-Info.plist";
