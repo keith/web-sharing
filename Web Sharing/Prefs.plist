@@ -8,5 +8,7 @@
 	<false/>
 	<key>stopWhenQuit</key>
 	<false/>
+	<key>isFirstLaunch</key>
+	<true/>
 </dict>
 </plist>

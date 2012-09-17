@@ -31,6 +31,41 @@
     if ([prefs boolForKey:START_SERVER_ON_LAUNCH]) {
         [self startApache:nil];
     }
+    [prefs setBool:YES forKey:IS_FIRST_LAUNCH];
+    if ([prefs boolForKey:IS_FIRST_LAUNCH]) {
+        NSFileManager *fm = [NSFileManager defaultManager];
+        NSString *userConfPath = [NSString stringWithFormat:@"%@%@.conf", USER_CONF_PATH, NSUserName()];
+        NSString *sitesFilePath = [NSString stringWithFormat:@"/Users/%@/Sites/", NSUserName()];
+        BOOL confExists = [fm fileExistsAtPath:userConfPath];
+        if (!confExists) {
+            NSAlert *alert = [NSAlert alertWithMessageText:@"User configuration not found" defaultButton:@"Yes" alternateButton:@"No" otherButton:nil informativeTextWithFormat:@"Your configuration file for your user's apache server does not exist in %@ would you like me to create one now?", userConfPath];
+            NSInteger returnCode = [alert runModal];
+            if (returnCode == NSAlertDefaultReturn) {
+                NSString *apacheConfFile = [NSString stringWithFormat:@"\\\"<Directory '%@'>\n\tOptions Indexes MultiViews\n\tAllowOverride All\n\tOrder allow,deny\n\tAllow from all\n</Directory>\\\"", sitesFilePath];
+                
+                NSString *script = [NSString stringWithFormat:@"do shell script \"echo %@ > %@\" with administrator privileges", apacheConfFile, userConfPath];
+                NSLog(@"%@", script);
+
+                NSAppleScript *appleScript = [[NSAppleScript new] initWithSource:script];
+                NSDictionary *error = [NSDictionary new];
+                if ([appleScript executeAndReturnError:&error]) {
+                    NSLog(@"worked");
+                } else {
+                    NSLog(@"didnt work %@", error);
+                }
+            } else {
+                NSLog(@"Dont Create");
+            }
+        }
+        
+        BOOL isDirectory = TRUE;
+        BOOL sitesFolderExists = [fm fileExistsAtPath:sitesFilePath isDirectory:&isDirectory];
+        if (!sitesFolderExists) {
+            NSLog(@"need to create sites folder");
+        } else {
+            NSLog(@"sites folder exists");
+        }
+    }
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification {
