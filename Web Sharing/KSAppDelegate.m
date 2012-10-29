@@ -62,6 +62,15 @@
         BOOL sitesFolderExists = [fm fileExistsAtPath:sitesFilePath isDirectory:&isDirectory];
         if (!sitesFolderExists) {
             NSLog(@"need to create sites folder");
+            NSString *script = [NSString stringWithFormat:@"do shell script \"mkdir ~/Sites\" with administrator privileges"];
+            
+            NSAppleScript *appleScript = [[NSAppleScript alloc] initWithSource:script];
+            NSDictionary *error = [NSDictionary new];
+            if ([appleScript executeAndReturnError:&error]) {
+                NSLog(@"worked mkdir sites");
+            } else {
+                NSLog(@"failed to make dir sites");
+            }
         } else {
             NSLog(@"sites folder exists");
         }
