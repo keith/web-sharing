@@ -1,7 +1,22 @@
-###Objective-C###
+####### OSX #######
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
 
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+
+####### Objective-C #######
 # Xcode
-build/*
+.DS_Store
+build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -16,3 +31,6 @@ xcuserdata
 profile
 *.moved-aside
 DerivedData
+.idea/
+
+

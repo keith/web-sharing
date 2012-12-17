@@ -5,9 +5,9 @@
 	<key>launchAtLogin</key>
 	<false/>
 	<key>startOnLaunch</key>
-	<false/>
+	<true/>
 	<key>stopWhenQuit</key>
-	<false/>
+	<true/>
 	<key>isFirstLaunch</key>
 	<true/>
 </dict>
